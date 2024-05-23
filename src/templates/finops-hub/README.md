@@ -71,7 +71,7 @@ If you run into any issues, see [Troubleshooting FinOps hubs](https://aka.ms/fin
    - **Export type** = `Daily export of month-to-date costs`
    - **File Partitioning** = On
    - **Storage account** = (Use subscription/resource from step 1)
-   - **Container** = `msexports`
+   - **Container** = `exports`
    - **Directory** = (Use the resource ID of the scope<sup>1</sup> you're exporting without the first "/")
 4. Run your export using the **Run now** command
    > Your data should be available within 15 minutes or so, depending on how big your account is.
@@ -116,7 +116,7 @@ The purpose of this deployment is to deploy the FinOps Hub in an environment tha
 2. Set target subscription
    > az account set -s `<SubscriptionId>`
 3. Execute deployment
-   > az deployment group create --resource-group `<RG Name>` --template-file .\main.bicep --parameters hubName='`<hubName>`' subnetResourceId='`<subnetResourceId>`' scriptsSubnetResourceId='`<scriptsSubnetResourceId>`'
+   > az deployment group create --resource-group `<RG Name>` --location `<location>` --template-file .\main.bicep --parameters hubName='`<hubName>`' subnetResourceId='`<subnetResourceId>`' scriptsSubnetResourceId='`<scriptsSubnetResourceId>`'
 
 4. Share and add the Self-Hosted Integration Runtime to the FinOps Azure Data Factory.
    > See [Create shared Self-Hosted integration runtime](https://learn.microsoft.com/azure/data-factory/create-shared-self-hosted-integration-runtime-powershell#create-a-shared-self-hosted-ir-using-azure-data-factory-ui) for details
@@ -128,7 +128,7 @@ The purpose of this deployment is to deploy the FinOps Hub in an environment tha
    - **Export type** = `Daily export of month-to-date costs`
    - **File Partitioning** = On
    - **Storage account** = (Use subscription/resource from step 1)
-   - **Container** = `msexports`
+   - **Container** = `exports`
    - **Directory** = (Use the resource ID of the scope<sup>1</sup> you're exporting without the first "/")
 7. Run your export using the **Run now** command
    > Your data should be available within 15 minutes or so, depending on how big your account is.

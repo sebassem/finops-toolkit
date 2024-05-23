@@ -78,7 +78,7 @@ module storageAccount 'br/public:avm/res/storage/storage-account:0.8.3' = {
           metadata: {}
         }
         {
-          name: 'exports'
+          name: 'msexports'
           publicAccess: 'None'
           metadata: {}
         }
@@ -237,7 +237,7 @@ output name string = storageAccount.name
 output configContainer string = 'config'
 
 @description('The name of the container used for Cost Management exports.')
-output exportContainer string = 'exports'
+output exportContainer string = 'msexports'
 
 @description('The name of the container used for normalized data ingestion.')
 output ingestionContainer string = 'ingestion'

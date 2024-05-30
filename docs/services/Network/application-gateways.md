@@ -42,9 +42,9 @@ Azure Application Gateways are one of several types of [scalable and secure netw
 
 An Azure Application Gateway provides a dedicated instance of a web traffic load balancer with Layer 7 routing, SSL termination, and web application firewall functionality. This allows you to manage and optimize the traffic to your web applications, ensuring they are secure, fast, and reliable. However, you still need to maintain the application gateway by performing tasks such as configuring rules, updating SSL certificates, and monitoring the gateway's performance.
 
-[About](https://azure.microsoft.com/products/virtual-machines){: .btn .fs-5 .mb-4 .mb-md-0 .mr-4 }
-[Pricing](https://azure.microsoft.com/pricing/details/virtual-machines){: .btn .fs-5 .mb-4 .mb-md-0 .mr-4 }
-[Documentation](https://learn.microsoft.com/azure/virtual-machines){: .btn .fs-5 .mb-4 .mb-md-0 .mr-4 }
+[About](https://azure.microsoft.com/products/application-gateway){: .btn .fs-5 .mb-4 .mb-md-0 .mr-4 }
+[Pricing](https://azure.microsoft.com/pricing/details/application-gateway){: .btn .fs-5 .mb-4 .mb-md-0 .mr-4 }
+[Documentation](https://learn.microsoft.com/azure/application-gateway){: .btn .fs-5 .mb-4 .mb-md-0 .mr-4 }
 
 <br>
 

@@ -7,7 +7,7 @@ description: 'Optimize the cost of your Application Gateways.'
 permalink: /services/network/application-gateways
 ---
 
-<span class="fs-9 d-block mb-4">{service}</span>
+<span class="fs-9 d-block mb-4">Application Gateway</span>
 Optimize the cost of your Application Gateways.
 {: .fs-6 .fw-300 }
 

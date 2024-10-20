@@ -52,8 +52,10 @@ param networkName string = 'vnet-finops-hub'
 @description('Optional. To use Private Endpoints in an existing virtual network, add target subnet resource Id.')
 param subnetResourceId string = ''
 
+param uniqueSuffixSA string = take(uniqueString(resourceGroup().id), 12)
+
 @description('Optional. Name of the Storage account for deployment scripts.')
-param dsStorageAccountName string = '${toLower(hubName)}stgdsscripts'
+param dsStorageAccountName string = '${take(uniqueSuffixSA, 12)}stgdsscripts'
 
 @description('Optional. To use Private Endpoints  in an existing virtual network, add target subnet resource Id for the deployment scripts')
 param scriptsSubnetResourceId string = ''
@@ -121,6 +123,11 @@ var dataFactoryName = replace(
 var safeHubName = replace(replace(toLower(hubName), '-', ''), '_', '')
 var storageAccountSuffix = uniqueSuffix
 var storageAccountName = '${take(safeHubName, 24 - length(storageAccountSuffix))}${storageAccountSuffix}'
+//var scriptstorageAccountSuffix = uniqueSuffix
+//var scriptStorageAccountName='${take(safeHubName, 24 - length(scriptstorageAccountSuffix))}${scriptstorageAccountSuffix}'
+var uniqueValue = uniqueString(resourceGroup().id)
+var safeString = replace(replace(toLower(uniqueValue), '-', ''), '_', '')
+var scriptStorageAccountName = '${take(safeString, 12)}stgdsscripts'
 
 var eventGridPrefix = '${replace(hubName, '_', '-')}-ns'
 var eventGridSuffix = '-${uniqueSuffix}'
